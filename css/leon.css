@@ -2,7 +2,7 @@
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
-    --section-padding: 60px;    /*repeat a lot so make it variable*/
+    --section-padding: 60px;
     --section-background: #F6F6F6;
     --paragraph-color: #777;
     --main-duration: 0.3s;
@@ -15,7 +15,7 @@
     box-sizing: border-box;
 }
 html{ 
-    scroll-behavior: smooth; /*to move smoothing betwwen links*/
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Work Sans", sans-serif;
@@ -55,7 +55,7 @@ body{
     letter-spacing: -3px;
     margin: 0;
 }
-.special-heading + p { /**/
+.special-heading + p {
     margin: -30px 0 0;
     font-size: 20px;
     text-align: center;
@@ -83,19 +83,19 @@ body{
     width: 60px;
 }
 .header .links {
-    position: relative; /*because it's parent every child inside it will moving according it*/
+    position: relative;
 }
-.header .links:hover ul{ /*sequencly اللي*/
+.header .links:hover ul{ 
     display: block;
 }
-.header .links:hover .icon span:nth-child(2) { /* sequencly*/
+.header .links:hover .icon span:nth-child(2) { 
     width: 100%;
 }
 .header .links .icon {
     width: 30px;
-    display: flex; /* between each other*/
-    flex-wrap: wrap; /* if the line finish go down*/
-    justify-content: flex-end; /*To Start From right To left*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
 }
 .header .links .icon span {
     background-color: #333;
@@ -117,21 +117,21 @@ body{
     margin: 0;
     padding: 0;
     background-color: #F6F6F6;
-    position: absolute; /*To Make The ul Move According The Links Class*/
-    right: 0; /*To Move 0 from right according to the links div*/
-    min-width: 200px; /**/
-    top: calc(100% + 15px); /*To Start From The Topest*/
-    display: none; /*To hidden it */
+    position: absolute; 
+    right: 0; 
+    min-width: 200px; 
+    top: calc(100% + 15px);
+    display: none; 
     z-index: 1;
 }
-.header .links ul::before { /*to make shape before the element ul*/ /*we give it absolute to move according to links div which ul moving according it*/
-    content: ""; /*We Need shape Without Content Just We need The Border*/
+.header .links ul::before { 
+    content: ""; 
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent #F6F6F6 transparent; /*شفاف*/
-    position: absolute;/*To Make The ul Move According The Links Class*/
-    right: 5px;/*To Move 5px from right according to the links div*/
-    top: -19.2px;/*To Move -20px from top according to the links div*/
+    border-color: transparent transparent #F6F6F6 transparent; 
+    position: absolute;
+    right: 5px;
+    top: -19.2px;
 }
 .header .links ul li a {
     display: block;
@@ -143,7 +143,7 @@ body{
 .header .links ul li a:hover {
     padding-left: 25px;
 }
-.header .links ul li:not(:last-child) a { /*exeption last and squencley*/
+.header .links ul li:not(:last-child) a { 
     border-bottom: 1px solid #ddd;
 }
 /* End Header */
@@ -164,7 +164,7 @@ body{
     max-width: 100%;
 }
 .landing .intro-text h1 {
-    margin: 0; /*To Remove extra space and remove the scrool in landing section*/
+    margin: 0; 
     font-weight: bold;
     font-size: 50px;
     color: var(--main-color);
@@ -181,9 +181,9 @@ body{
     background-color: var(--section-background);
 }
 .features .container { 
-    display: grid; /**/
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));/**/
-    gap: 20px;/**/
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 .features .feat {
     padding: 20px;
@@ -193,7 +193,7 @@ body{
     color: var(--main-color);
 }
 .features .feat h3 {
-    font-weight: 800; /*Extra Bold*/
+    font-weight: 800; 
     margin: 30px 0px;
 }
 .features .feat p {
@@ -219,16 +219,16 @@ font-size: 17px;
 }
 @media (max-width: 767px) {
     .services .services-content .srv {
-        flex-direction: column; /*from row to column*/
+        flex-direction: column; 
         text-align: center;
     }
 }
 .services .services-content .srv i {
     color: var(--main-color);
-    flex-basis: 60px; /*give the item width but inside flex*/
+    flex-basis: 60px;
 }
 .services .services-content .srv .text{
-    flex: 1; /*To Shrink item as other items in flex*/
+    flex: 1; 
 }
 .services .services-content .srv h3{
     margin: 0 0 20px;
@@ -246,7 +246,7 @@ font-size: 17px;
     content: "";
     position: absolute;
     width: 100px;
-    height: calc(100% + 100px); /*same image height and 50 up and down*/
+    height: calc(100% + 100px);
     right: 0; 
     top: -50px;
     background-color: var(--secondary-color);
@@ -277,7 +277,7 @@ font-size: 17px;
     background-color: white;
 }
 .portfoilo .portfoilo-content .card img{
-    max-width: 100%; /**/
+    max-width: 100%;
 }
 .portfoilo .portfoilo-content .card .info{
     padding: 20px;
@@ -301,13 +301,13 @@ font-size: 17px;
     padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) + 60px);
 }
-.about .about-content { /*Here I'll use flex insted grid just for change*/
+.about .about-content {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-@media (max-width: 991px) { /*display image after before also and make the image center*/
+@media (max-width: 991px) {
     .about .about-content {
         flex-direction: column; 
         text-align: center; 
@@ -354,19 +354,19 @@ font-size: 17px;
     max-width: 100%;
 }
 .about .about-content .text {
-    flex-basis: calc(100% - 500px); /**/
+    flex-basis: calc(100% - 500px);
 }
-.about .about-content .text p:first-of-type { /**/
+.about .about-content .text p:first-of-type { 
     font-weight: bold; 
     line-height: 2; 
     margin-bottom: 50px; 
 }
 .about .about-content .text hr { 
-    width: 50%; /**/
-    display: inline-block; /**/
+    width: 50%; 
+    display: inline-block; 
     border-color: var(--main-color);
 }
-.about .about-content .text p:last-of-type { /**/
+.about .about-content .text p:last-of-type { 
     line-height: 2;
     color: var(--paragraph-color);
 }
@@ -391,7 +391,7 @@ font-size: 17px;
 }
 .contact .info .link{
     text-decoration: none;
-    display: block; /*to respect margin */
+    display: block; 
     font-size: 35px;
     font-weight: 800;
     color: var(--main-color);
